@@ -9,7 +9,7 @@ function TopicDescription() {
     setUserCourseInput(prev=>({...prev,[fieldName]:value}))
   }
   return (
-    <div className="mx-20 lg:mx-44">
+    <div className="md:mx-20 sm:mx-5 lg:mx-44">
       <div className="mt-5">
         <label>
          💡 Write the topic for which you want to generate the course (e.g.,

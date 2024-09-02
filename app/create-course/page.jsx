@@ -138,7 +138,7 @@ function CreateCourse() {
           <SelectOption />
         )}
 
-        <div className="flex justify-between mt-10">
+        <div className="flex justify-between mt-10 gap-5">
           <Button
             disabled={activeIndex == 0}
             onClick={() => setActiveIndex(activeIndex - 1)}

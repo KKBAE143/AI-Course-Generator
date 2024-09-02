@@ -14,8 +14,8 @@ function SelectOption() {
     setUserCourseInput(prev=>({...prev,[fieldName]:value}))
   }
   return (
-    <div className="px-10 md:px-20 lg:px-44">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="px-5 md:px-20 lg:px-44">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <label className="text-sm">🎓 Difficulty Level</label>
           <Select onValueChange={(value)=>handleInputChange('level',value)} defaultValue={userCourseInput?.level}>
