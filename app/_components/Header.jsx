@@ -1,13 +1,15 @@
 import { Button } from '@/components/ui/button'
+import { UserButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 function Header() {
+  const {user} = useUser()
   return (
     <div className='flex justify-between p-5 shadow-sm'>
       <Image src="/logo.svg" width={150} height={100}/>
-      <Link href={"/dashboard"}><Button>Get Started</Button></Link>
+      {user ? <UserButton/> :<Link href={"/dashboard"}><Button>Get Started</Button></Link>}
     </div>
   )
 }
