@@ -1,6 +1,7 @@
 'use client'
 import { UserCourseListContext } from "@/app/_context/UserCourseListContext";
 import { Progress } from "@/components/ui/progress";
+import { SignedOut, useClerk } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,6 +14,7 @@ import {
 } from "react-icons/hi2";
 function SideBar() {
   const {userCourseList,setUserCourseList} = useContext(UserCourseListContext)
+  // const {signOut} = useClerk()
   const Menu = [
     {
       id: 1,
@@ -32,17 +34,18 @@ function SideBar() {
       icon: <HiOutlineShieldCheck />,
       path: "/dashboard/upgrade",
     },
-    {
-      id: 1,
-      name: "Logout",
-      icon: <HiOutlinePower />,
-      path: "/dashboard/logout",
-    },
+    // {
+    //   id: 1,
+    //   name: "Logout",
+    //   icon: <HiOutlinePower />,
+    //   path: "/dashboard/logout",
+    //   onClick: signOut()
+    // },
   ];
   const path = usePathname()
   return (
     <div className="fixed h-full md:w-64 p-5 shadow-md">
-      <Image src={"/logo.svg"} width={160} height={100} />
+      <Link href={"/"}><Image src={"/logo.svg"} width={160} height={100} /></Link>
       <hr className="my-5" />
 
       <ul>

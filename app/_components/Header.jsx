@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import { UserButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image'
@@ -8,7 +9,7 @@ function Header() {
   const {user} = useUser()
   return (
     <div className='flex justify-between p-5 shadow-sm'>
-      <Image src="/logo.svg" width={150} height={100}/>
+    <Image src="/logo.svg" width={150} height={100} className='cursor-pointer'/>
       {user ? <UserButton/> :<Link href={"/dashboard"}><Button>Get Started</Button></Link>}
     </div>
   )
