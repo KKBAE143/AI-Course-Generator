@@ -9,7 +9,7 @@ function Header() {
   const {user} = useUser()
   return (
     <div className='flex justify-between p-5 shadow-sm'>
-    <Image src="/logo.svg" width={150} height={100} className='cursor-pointer'/>
+    <Link href={`${process.env.NEXT_PUBLIC_HOST_NAME}/dashboard`}><Image src="/logo.svg" width={150} height={100} className='cursor-pointer'/></Link>
       {user ? <UserButton/> :<Link href={"/dashboard"}><Button>Get Started</Button></Link>}
     </div>
   )
