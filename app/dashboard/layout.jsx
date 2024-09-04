@@ -9,11 +9,18 @@ import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi2";
 function DashboardLayout({ children }) {
   const [userCourseList,setUserCourseList] = useState([])
   const [showSideBar,setShowSideBar] = useState(false)
+  const [showArrow,setShowArrow] = useState(true)
+  const setState = ()=>{
+    setShowSideBar(!showSideBar)
+    setShowArrow(!showArrow)
+  }
   return (
     <UserCourseListContext.Provider value={{userCourseList,setUserCourseList}}>
     <div>
-      {showSideBar ? <HiOutlineArrowLeft className="text-2xl m-5 text-primary cursor-pointer md:hidden" onClick={()=>setShowSideBar(!showSideBar)}/> :<HiOutlineArrowRight className="text-2xl m-5 text-primary hover:translate-x-1 transition-all cursor-pointer md:hidden" onClick={()=>setShowSideBar(!showSideBar)}/>}
-      <div className={`md:w-64 ${showSideBar ? 'w-70' : 'hidden'} md:block`}>
+ {  showArrow && <HiOutlineArrowRight className="text-2xl m-5 text-primary hover:translate-x-1 transition-all cursor-pointer md:hidden" onClick={setState}/>}
+
+      <div className={`md:w-64 relative ${showSideBar ? 'w-70' : 'hidden'} md:block`}>
+     <HiOutlineArrowLeft className=" text-2xl m-5 text-primary cursor-pointer md:hidden" onClick={setState}/> 
         <SideBar />
       </div>
       <div className="md:ml-64">
