@@ -21,7 +21,7 @@ function DashboardLayout({ children }) {
 
       <div className={`md:w-64 relative ${showSideBar ? 'w-70' : 'hidden'} md:block`}>
      <HiOutlineArrowLeft className=" text-2xl m-5 text-primary cursor-pointer md:hidden" onClick={setState}/> 
-        <SideBar />
+        <SideBar setState={setState}/>
       </div>
       <div className="md:ml-64">
         <Header/>
