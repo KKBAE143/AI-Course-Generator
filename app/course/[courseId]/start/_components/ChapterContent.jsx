@@ -33,7 +33,7 @@ function ChapterContent({chapter,content}) {
 
               
               <pre className='overflow-x-scroll md:overflow-x-hidden'>
-                <code className='text-wrap'>{item?.code.replace('<precode>', '').replace('</precode>','')}</code>
+                <code className='text-wrap'>{item?.code.replace('<precode>', '').replace('</precode>','').replace('<pre>','').replace('</pre>','')}</code>
               </pre>
               </div>
           }
