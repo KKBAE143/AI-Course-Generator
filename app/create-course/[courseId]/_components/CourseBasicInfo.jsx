@@ -33,7 +33,7 @@ function CourseBasicInfo({course,refreshData,edit=true}) {
 
   }
   return (
-    <div className='p-10 border rounded-xl shadow-sm mt-5'>
+    <div className='p-5 border rounded-xl shadow-sm mt-5'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
         <div>
             <h2 className='font-bold text-3xl'>{course?.courseOutput?.course?.name} { edit && <EditCourseBasicInfo course={course} refreshData={()=>refreshData(true)}/>}</h2>
@@ -48,7 +48,7 @@ function CourseBasicInfo({course,refreshData,edit=true}) {
           <label htmlFor="upload-image">
 
          
-            <Image src={ selectedFile? selectedFile : "/placeholder.jpg"} width={300} height={300} className='w-full rounded-xl h-[250px] object-cover cursor-pointer'/>
+            <Image src={ selectedFile? selectedFile : "/placeholder.jpg"} width={300} height={300} className='w-full rounded-xl xs:h-[170px] sm:h-[250px] object-cover cursor-pointer'/>
             {edit &&<input type="file" id='upload-image' className='opacity-0' onChange={onFileSelected}/>}
             </label>
         </div>
