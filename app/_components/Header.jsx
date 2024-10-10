@@ -23,9 +23,9 @@ function Header() {
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === '/dashboard' ? 'text-primary font-bold' : ''}`}>
           <Link href='/dashboard'>Dashboard</Link>
         </li>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === '/dashboard/questions' ? 'text-primary font-bold' : ''}`}>
+        {/* <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === '/dashboard/questions' ? 'text-primary font-bold' : ''}`}>
           <Link href='https://ai-course-generator-six.vercel.app/'>AI Course Generator</Link>
-        </li>
+        </li> */}
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === '/dashboard/upgrade' ? 'text-primary font-bold' : ''}`}>
           <Link href='https://ai-mockup.vercel.app/'>AI Mock Interview</Link>
         </li>
