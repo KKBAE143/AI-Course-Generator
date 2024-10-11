@@ -30,7 +30,7 @@ function Header() {
           <Link href='https://ai-mockup.vercel.app/'>AI Mock Interview</Link>
         </li>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === '/dashboard/upgrade' ? 'text-primary font-bold' : ''}`}>
-          <Link href='https://ai-mentor-tan.vercel.app/'>AI Mentor</Link>
+          <Link href='https://ai-mentor-tau.vercel.app/'>AI Mentor</Link>
         </li>
       </ul>
 
