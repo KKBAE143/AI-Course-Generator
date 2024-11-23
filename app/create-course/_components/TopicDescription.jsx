@@ -12,16 +12,25 @@ function TopicDescription() {
     <div className="md:mx-20 sm:mx-5 lg:mx-44">
       <div className="mt-5">
         <label>
-         💡 Write the topic for which you want to generate the course (e.g.,
-          Python Course, Yoga, etc.):
+         💡 Select the soft skill you want to develop (e.g., Communication, Leadership, Time Management, etc.):
         </label>
-        <Input placeholder={"Topic"} onChange={(e)=>handleInputChange('topic',e.target.value)} defaultValue={userCourseInput?.topic} className="h-14 text-lg"/>
+        <Input 
+          placeholder="Enter soft skill" 
+          onChange={(e)=>handleInputChange('topic',e.target.value)} 
+          defaultValue={userCourseInput?.topic} 
+          className="h-14 text-lg"
+        />
       </div>
       <div className="mt-5">
         <label>
-         📝 Tell us more about your course, what you want to include in the course (Optional).
+         📝 Tell us about your current role and specific areas you'd like to improve in this soft skill (Optional):
         </label>
-        <Textarea placeholder="About your course" onChange={(e)=>handleInputChange('description',e.target.value)} defaultValue={userCourseInput?.description} className="h-14 text-lg"/>
+        <Textarea 
+          placeholder="Describe your goals and current challenges" 
+          onChange={(e)=>handleInputChange('description',e.target.value)} 
+          defaultValue={userCourseInput?.description} 
+          className="h-14 text-lg"
+        />
       </div>
     </div>
   );

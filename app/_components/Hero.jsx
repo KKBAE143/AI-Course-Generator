@@ -3,18 +3,19 @@ import React from "react";
 function Hero() {
   return (
     <section className="bg-gray-50">
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex  lg:items-center">
+      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:items-center">
         <div className="mx-auto max-w-xl text-center">
           <h1 className="text-3xl font-extrabold sm:text-5xl text-primary">
-            AI Course Generator
+            SoftSkills Master
             <strong className="font-extrabold text-black sm:block">
               {" "}
-              Custom Learning Paths, Powered By AI.{" "}
+              Enhance Your Professional Growth With AI{" "}
             </strong>
           </h1>
 
           <p className="mt-4 sm:text-xl/relaxed">
-            Unlock personalized education with AI-driven course creation. Tailor your learning journey to fit your unique goals and pace
+            Develop essential soft skills for career success. From communication to leadership, 
+            our AI-powered platform creates personalized development plans tailored to your professional goals.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
