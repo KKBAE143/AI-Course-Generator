@@ -1,19 +1,19 @@
 export default [
   {
     id: 1,
-    name: "Programming",
+    name: "Communication Skills",
     icon: "/coding.png",
     prompt:''
   },
   {
     id: 2,
-    name: "Health",
+    name: "Leadership and Management",
     icon: "/lotus.png",
     prompt:''
   },
   {
     id: 3,
-    name: "Creative",
+    name: "Emotional Intelligence",
     icon: "/creative.png",
     prompt:''
   },
